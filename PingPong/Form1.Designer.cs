@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.playground = new System.Windows.Forms.Panel();
+            this.mark_lbl = new System.Windows.Forms.Label();
+            this.percent_lbl = new System.Windows.Forms.Label();
+            this.achievement_lbl = new System.Windows.Forms.Label();
+            this.lvlValue_lbl = new System.Windows.Forms.Label();
+            this.lvl_lbl = new System.Windows.Forms.Label();
             this.achievement = new System.Windows.Forms.Label();
             this.gameover_lbl = new System.Windows.Forms.Label();
             this.points_lbl = new System.Windows.Forms.Label();
@@ -38,9 +43,6 @@
             this.ball = new System.Windows.Forms.PictureBox();
             this.racket = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lvl_lbl = new System.Windows.Forms.Label();
-            this.lvlValue_lbl = new System.Windows.Forms.Label();
-            this.achievement_lbl = new System.Windows.Forms.Label();
             this.playground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racket)).BeginInit();
@@ -49,6 +51,8 @@
             // playground
             // 
             this.playground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playground.BackgroundImage")));
+            this.playground.Controls.Add(this.mark_lbl);
+            this.playground.Controls.Add(this.percent_lbl);
             this.playground.Controls.Add(this.achievement_lbl);
             this.playground.Controls.Add(this.lvlValue_lbl);
             this.playground.Controls.Add(this.lvl_lbl);
@@ -63,6 +67,54 @@
             this.playground.Name = "playground";
             this.playground.Size = new System.Drawing.Size(784, 507);
             this.playground.TabIndex = 0;
+            // 
+            // mark_lbl
+            // 
+            this.mark_lbl.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mark_lbl.Location = new System.Drawing.Point(699, 39);
+            this.mark_lbl.Name = "mark_lbl";
+            this.mark_lbl.Size = new System.Drawing.Size(30, 26);
+            this.mark_lbl.TabIndex = 10;
+            this.mark_lbl.Text = "%";
+            // 
+            // percent_lbl
+            // 
+            this.percent_lbl.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold);
+            this.percent_lbl.Location = new System.Drawing.Point(654, 39);
+            this.percent_lbl.Name = "percent_lbl";
+            this.percent_lbl.Size = new System.Drawing.Size(45, 26);
+            this.percent_lbl.TabIndex = 9;
+            this.percent_lbl.Text = " 0";
+            // 
+            // achievement_lbl
+            // 
+            this.achievement_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.achievement_lbl.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.achievement_lbl.ForeColor = System.Drawing.Color.Black;
+            this.achievement_lbl.Location = new System.Drawing.Point(338, 0);
+            this.achievement_lbl.Name = "achievement_lbl";
+            this.achievement_lbl.Size = new System.Drawing.Size(128, 71);
+            this.achievement_lbl.TabIndex = 8;
+            this.achievement_lbl.Text = "You Are \r\nAWESOME!\r\n";
+            this.achievement_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lvlValue_lbl
+            // 
+            this.lvlValue_lbl.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lvlValue_lbl.Location = new System.Drawing.Point(705, 13);
+            this.lvlValue_lbl.Name = "lvlValue_lbl";
+            this.lvlValue_lbl.Size = new System.Drawing.Size(24, 26);
+            this.lvlValue_lbl.TabIndex = 7;
+            this.lvlValue_lbl.Text = "1";
+            // 
+            // lvl_lbl
+            // 
+            this.lvl_lbl.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lvl_lbl.Location = new System.Drawing.Point(654, 13);
+            this.lvl_lbl.Name = "lvl_lbl";
+            this.lvl_lbl.Size = new System.Drawing.Size(75, 26);
+            this.lvl_lbl.TabIndex = 6;
+            this.lvl_lbl.Text = "Lvl: ";
             // 
             // achievement
             // 
@@ -128,36 +180,6 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lvl_lbl
-            // 
-            this.lvl_lbl.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lvl_lbl.Location = new System.Drawing.Point(670, 13);
-            this.lvl_lbl.Name = "lvl_lbl";
-            this.lvl_lbl.Size = new System.Drawing.Size(59, 26);
-            this.lvl_lbl.TabIndex = 6;
-            this.lvl_lbl.Text = "Lvl: ";
-            // 
-            // lvlValue_lbl
-            // 
-            this.lvlValue_lbl.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lvlValue_lbl.Location = new System.Drawing.Point(705, 13);
-            this.lvlValue_lbl.Name = "lvlValue_lbl";
-            this.lvlValue_lbl.Size = new System.Drawing.Size(24, 26);
-            this.lvlValue_lbl.TabIndex = 7;
-            this.lvlValue_lbl.Text = "1";
-            // 
-            // achievement_lbl
-            // 
-            this.achievement_lbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.achievement_lbl.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.achievement_lbl.ForeColor = System.Drawing.Color.Black;
-            this.achievement_lbl.Location = new System.Drawing.Point(338, 0);
-            this.achievement_lbl.Name = "achievement_lbl";
-            this.achievement_lbl.Size = new System.Drawing.Size(128, 71);
-            this.achievement_lbl.TabIndex = 8;
-            this.achievement_lbl.Text = "You Are \r\nAWESOME!\r\n";
-            this.achievement_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +211,8 @@
         private System.Windows.Forms.Label lvlValue_lbl;
         private System.Windows.Forms.Label lvl_lbl;
         private System.Windows.Forms.Label achievement_lbl;
+        private System.Windows.Forms.Label percent_lbl;
+        private System.Windows.Forms.Label mark_lbl;
     }
 }
 

@@ -18,6 +18,7 @@ namespace PingPong
         
         public int points = 0;
         public int lvl = 1;
+        public int percentValue = 0;
 
         public Form1()
         {
@@ -55,8 +56,13 @@ namespace PingPong
 
                 speed_top = -speed_top;
                 points += 1;
+                if (percentValue < 100)
+                {
+                    percentValue += 25;
+                }
                 points_lbl.Text = points.ToString();
                 lvlValue_lbl.Text = lvl.ToString();
+                percent_lbl.Text = percentValue.ToString();
                 if (points % 10 == 0)
                 {
                     achievement.Visible = true;
@@ -67,9 +73,14 @@ namespace PingPong
                     achievement.Visible = false;
                     achievement_lbl.Visible = false;
                 }
-                if (points % 3 == 0)
+                if (points % 4 == 0)
                 {
                     lvl += 1;
+                }
+                if (percentValue % 100 == 0)
+                {
+                    percentValue = 0;
+
                 }
 
                 Random r = new Random();
@@ -127,8 +138,11 @@ namespace PingPong
                 points_lbl.Text = "0";
                 lvl = 1;
                 lvlValue_lbl.Text = "1";
+                percentValue = 0;
+                percent_lbl.Text = "0";
                 timer1.Enabled = true;
                 gameover_lbl.Visible = false;
+
                
             }
         }
