@@ -1,0 +1,9 @@
+c:\users\orsolya\documents\visual studio 2015\Projects\PingPong\PingPong\bin\Debug\PingPong.exe.config
+c:\users\orsolya\documents\visual studio 2015\Projects\PingPong\PingPong\bin\Debug\PingPong.exe
+c:\users\orsolya\documents\visual studio 2015\Projects\PingPong\PingPong\bin\Debug\PingPong.pdb
+c:\users\orsolya\documents\visual studio 2015\Projects\PingPong\PingPong\obj\Debug\PingPong.csprojResolveAssemblyReference.cache
+c:\users\orsolya\documents\visual studio 2015\Projects\PingPong\PingPong\obj\Debug\PingPong.Form1.resources
+c:\users\orsolya\documents\visual studio 2015\Projects\PingPong\PingPong\obj\Debug\PingPong.Properties.Resources.resources
+c:\users\orsolya\documents\visual studio 2015\Projects\PingPong\PingPong\obj\Debug\PingPong.csproj.GenerateResource.Cache
+c:\users\orsolya\documents\visual studio 2015\Projects\PingPong\PingPong\obj\Debug\PingPong.exe
+c:\users\orsolya\documents\visual studio 2015\Projects\PingPong\PingPong\obj\Debug\PingPong.pdb
